@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "leet-code"
+version = "0.1.0"
+description = ""
+authors = ["Yannik Sacherer <A1DF6EF@jwpmx2kh4d.koeln.ads.risnet.de>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+ruff = "^0.8.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
