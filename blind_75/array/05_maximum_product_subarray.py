@@ -22,4 +22,9 @@ from typing import List
 
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
+        for x in nums:
+            print(x)
         
+
+test = Solution()
+test.maxProduct([2,3,-2,4])

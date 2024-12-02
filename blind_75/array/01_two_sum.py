@@ -32,14 +32,32 @@ Only one valid answer exists.
 
 from typing import List
 
+# Brute Force O(n^2).
+# class Solution:
+#     def twoSum(self, nums: List[int], target: int) -> List[int]:
+#         for i_1, value in enumerate(nums):
+#             for i_2, sum_value in enumerate(nums[i_1:]):
+#                 if value + sum_value == target:
+#                     print([i_1, i_2])
 
-class Solution:
+
+# test = Solution()
+# test.twoSum([2, 7, 11, 15], 9)
+
+# Hash-table
+class Solution_2:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        for i_1, value in enumerate(nums):
-            for i_2, sum_value in enumerate(nums[i_1:]):
-                if value + sum_value == target:
-                    print([i_1, i_2])
+        numMap = {}
+        n = len(nums)
 
+        for i in range(n):
+            complement = target - nums[i]
+            print(numMap)
+            if complement in numMap:
+                return [numMap[complement], i]
+            numMap[nums[i]] = i
 
-test = Solution()
-test.twoSum([2, 7, 11, 15], 9)
+        return []  # No solution found
+
+test_2 = Solution_2()
+print(test_2.twoSum([3,2,4], target=6))
